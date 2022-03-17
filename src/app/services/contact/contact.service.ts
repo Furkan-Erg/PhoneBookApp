@@ -22,4 +22,9 @@ export class ContactService {
     return this.httpClient.post<APIResult>(url, body);
   }
 
+  deleteContactByID(id:number):Observable<APIResult>{
+    const url: string = `${environment.apiUrl}/contact/${id}`;
+    return this.httpClient.delete<APIResult>(url);
+  }
+
 }

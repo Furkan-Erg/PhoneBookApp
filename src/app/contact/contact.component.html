@@ -7,7 +7,9 @@
       <th scope="col">Province</th>
       <th scope="col">District</th>
       <th scope="col">Owner Name</th>
+      <th scope="col">Actions</th>
       <td><button (click)="addContactOnClick()" type="button" class="btn btn-primary">Contact Create</button></td>
+      <td><button (click)="logOut()" type="button" class="btn btn-warning">Log Out</button></td>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +20,9 @@
       <td>{{item.province}}</td>
       <td>{{item.district}}</td>
       <td>{{item.ownerName}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteContactOnClick(item.id)">del</button>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -1,5 +1,6 @@
 
 export class ContactResponse {
+    id: number;
     title:string;
     phoneNumber:string;
     adress:string;

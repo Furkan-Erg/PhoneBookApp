@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterRequest } from '../models/auth/register/RegisterRequest';
 import { AuthService } from '../services/auth/auth.service';
@@ -25,6 +25,7 @@ export class RegisterComponent implements OnInit {
       Surname:[null],
       Email: [null],
       Password: [null],
+      TermsOfService:[false,[Validators.requiredTrue]]
     });
   }
   ngOnInit(): void {
