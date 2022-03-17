@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Adress</th>
+      <th scope="col">Province</th>
+      <th scope="col">District</th>
+      <th scope="col">Owner Name</th>
+      <td><button (click)="addContactOnClick()" type="button" class="btn btn-primary">Contact Create</button></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of contacts">
+      <th scope="row">{{item.title}}</th>
+      <td>{{item.phoneNumber}}</td>
+      <td>{{item.adress}}</td>
+      <td>{{item.province}}</td>
+      <td>{{item.district}}</td>
+      <td>{{item.ownerName}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
