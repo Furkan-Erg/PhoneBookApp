@@ -1,5 +1,6 @@
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container  h-100">
+      <a href="/home" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Home</a>
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
@@ -21,11 +22,21 @@
                 <div class="form-outline mb-4">
                   <input required formControlName="Email" type="Email"  id="form3Example3cg" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example3cg">Your Email</label>
+
+                  <div *ngIf="(Email.invalid && Email.touched) || Email.dirty">
+                    <small *ngIf="Email.errors?.required" class="text-danger">email is required</small>
+                    <small *ngIf="Email.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+                  </div>
                 </div>
+
 
                 <div class="form-outline mb-4">
                   <input required formControlName="Password" type="password"  id="form3Example4cg" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example4cg">Password</label>
+
+                  <div *ngIf="(Password.invalid && Password.touched) || Email.dirty">
+                    <small *ngIf="Password.errors?.required" class="text-danger">Password is required</small>
+                  </div>
                 </div>
 
                 <div class="form-check d-flex justify-content-center mb-5">
